@@ -1,0 +1,147 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+nav{
+  height: 60px;
+  background-color:antiquewhite;
+  display: flex;
+}
+.navbar-links{
+  display: flex;
+  list-style: none;
+  width: 30%;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  margin-left: auto;
+}
+.navbar-links li a{
+  color: black;
+  text-decoration: none;
+}
+.navbar-toggler{
+  color: black;
+}
+.brand-name{
+  margin: 20px;
+}
+.brand-name a{
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  
+}
+.Form{
+  width: 50%;
+  margin: 10px;
+  margin-left: 20vw;
+}
+.Form button{
+  min-height: 30px;
+  min-width: 50px;
+  
+  letter-spacing: 1px;
+  padding:10px 10px 10px 10px;
+  background-color: transparent;
+  border: 1px solid #00FF00 ;
+  /* box-shadow: 5px 0px 3px 0px #00FF00; */
+  border-radius: 10%;
+  transition: all 1s linear;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.Form button:hover{
+  background-color:  #00FF00 ;
+}
+.Form input{
+  width: 50%;
+}
+.container{
+  margin: 05px;
+  padding: 20px;
+ 
+}
+
+/* Product lists */
+.items{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.items li{
+  text-decoration: none;
+  list-style:none;
+  padding: 0;
+  margin: 20px;
+  border-bottom: 1px #fff00f solid;
+}
+.item{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item-review{
+  margin-bottom: 10px;
+}
+.item-image{
+  max-width: 200px;
+  max-height: 200px;
+}
+@media screen and (max-width: 768px) {
+ .line{
+     width: 30px;
+     height: 3px;
+     background-color: black;
+     margin:5px;
+ }
+  nav{
+      position: relative;
+  } 
+  
+  .navbar-links{
+      position:fixed;
+      width: 100%;
+      background-color:lightcyan;
+      flex-direction: column;
+      height: 100%;
+      clip-path: circle(100px at 100% -30%);
+      -webkit-clip-path:circle(100px at 100% -30%);
+      transition:all 1s ease-out;
+  }
+.navbar-links.open{
+  clip-path: circle(800px at 100% -20%);
+  -webkit-clip-path:circle(800px at 100% -20%);
+}
+.hamburger{
+      width: 5%;
+      position: absolute;
+      cursor: pointer;
+      top: 50%;
+      right: 5%;
+      transform: translate(-5%, -50%);
+      z-index: 2;
+  }
+  .Form button{
+      max-width: 20px;
+      max-height: 20px;
+      letter-spacing: 0px;
+      padding:0px 5px 0px 5px;
+      background-color: transparent;
+      font-size: 12px;
+  }
+  .brand-name{
+      margin: 10px;
+      width: 05%;
+  }
+  .Form{
+      width: 100%;
+  }
+  .Form input{
+      width: 60%;
+  }
+           
+  
+}
